@@ -1,0 +1,48 @@
+fontname "Nimbus Mono:antialias=false;pixelsize=16"
+
+moveamount 64
+borderwidth 4
+gap 64 32 32 32
+ignore polybar
+
+command qutebrowser /usr/bin/qutebrowser
+command st          /usr/local/bin/st
+command skype       /usr/bin/skypeforlinux
+command discord     /usr/bin/discord
+
+bind-key 4-Return "st"
+bind-key 4-slash  "emacs"
+bind-key 4-s      menu-exec
+bind-key 4-n      window-delete
+
+bind-key 4-h window-move-left
+bind-key 4-j window-move-down
+bind-key 4-k window-move-up
+bind-key 4-l window-move-right
+
+bind-key 4-r window-snap-right
+bind-key 4-c window-snap-left
+
+bind-key 4-i window-resize-right
+bind-key 4-u window-resize-left
+bind-key 4-p window-resize-up
+bind-key 4-y window-resize-down
+
+bind-key S4-r  window-vmaximize
+bind-key S4-c  window-hmaximize
+
+bind-key 4-1  "/home/lincoln/bin/cwm-tiles.sh 0 0"
+bind-key S4-1 "/home/lincoln/bin/cwm-tiles.sh 0 1"
+bind-key 4-2  "/home/lincoln/bin/cwm-tiles.sh 1 0"
+bind-key S4-2 "/home/lincoln/bin/cwm-tiles.sh 1 1"
+bind-key 4-3  "/home/lincoln/bin/cwm-tiles.sh 2 0"
+bind-key S4-3 "/home/lincoln/bin/cwm-tiles.sh 2 1"
+# bind-key 4-4  "/home/lincoln/bin/cwm-tiles.sh 3 0"
+# bind-key S4-4 "/home/lincoln/bin/cwm-tiles.sh 3 1"
+
+bind-key 4-z "mocp -f"
+bind-key 4-v "mocp -G"
+bind-key 4-w "mocp -r"
+
+bind-key 4-space  "setxkbmap -layout us -variant dvorak"
+bind-key 4S-space "setxkbmap -layout de -variant dvorak"
