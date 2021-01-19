@@ -1,10 +1,9 @@
 setxkbmap -layout us,de -variant dvorak,dvorak
+xmodmap ~/.Xmodmap
 
 xrdb -merge ~/.Xresources
 feh --no-xinerama --bg-fill ~/bg.jpg
 picom -b
 polybar title &
 
-dunst &
-
-exec openbsd-cwm
+dbus-launch --exit-with-session openbsd-cwm && dunst
