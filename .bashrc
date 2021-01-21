@@ -123,4 +123,5 @@ alias WAN_DISABLE="sudo ip route del default"
 alias WAN_ENABLE="sudo ip route add default via 192.168.0.11"
 alias SCHED="watch -n 15 --color disorg.sh"
 
-export PATH="$PATH:/home/lincoln/bin"
+export PATH="$PATH:/usr/share/texlive:/home/lincoln/bin"
+export EDITOR="nvim"

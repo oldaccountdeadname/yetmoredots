@@ -1,1 +1,43 @@
-/home/lincoln/.config/polybar/config
+[colors]
+font = "Nimbus Mono:antialias=false:size=12;5"
+bg = "#441510"
+accent = "#aaaaaa"
+
+[bar/title]
+monitor = HDMI-0
+width = 2496
+height = 32
+offset-y = 8
+offset-x = 32
+padding = 8
+module-margin = 4
+
+font-0 = ${colors.font}
+background = ${colors.bg}
+
+modules-left = date xtitle
+modules-right = mocp disorg
+
+[module/date]
+type = internal/date
+interval = 0.5
+format-foreground = ${colors.accent}
+
+date = %d %B %Y
+time = %H:%M
+
+label = %date% %time%
+
+[module/xtitle]
+type = internal/xwindow
+format-foreground = ${colors.accent}
+
+[module/mocp]
+type=custom/script
+interval = 0.5
+exec=playerctl metadata title
+
+[module/disorg]
+type = custom/script
+interval = 60
+exec = disorg.sh COUNT
