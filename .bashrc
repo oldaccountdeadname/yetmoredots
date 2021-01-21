@@ -122,6 +122,7 @@ export PS1="\W -> "
 alias WAN_DISABLE="sudo ip route del default"
 alias WAN_ENABLE="sudo ip route add default via 192.168.0.11"
 alias SCHED="watch -n 15 --color disorg.sh"
+alias DISORGCONF="$EDITOR ~/.config/disorg/disorg"
 
 export PATH="$PATH:/usr/share/texlive:/home/lincoln/bin"
 export EDITOR="nvim"
